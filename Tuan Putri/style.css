@@ -1,0 +1,85 @@
+/* Reset and styling adjustments */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+/* Vibrant animated background */
+.vibrant-background {
+    position: fixed; /* Use fixed to keep the background still */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff69b4, #ff1493, #ff6ec7, #ff82ab, #ff99cc);
+    background-size: 300% 300%;
+    animation: vibrantAnimation 10s ease infinite;
+    z-index: -1; /* Behind other content */
+}
+
+/* Animation for background */
+@keyframes vibrantAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Flex container for content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between .hehe elements */
+    z-index: 1; /* Above the background */
+}
+
+/* Center each .hehe box and style */
+.hehe {
+    width: 400px;
+    max-width: 600px; /* Optional: set a max width */
+    height: 200px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    text-align: center;
+}
+
+.hehe h3{
+    margin-top: 50px;
+}
+
+#poem{
+    background-color: antiquewhite;
+    height: fit-content;
+    width: 380px;
+    border-radius: 5px;
+    padding-left: 30px;
+    font-size: 0.9rem;
+    
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
